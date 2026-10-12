@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UKSteps — Les démarches de la vie au Royaume-Uni, étape par étape</title>
+<meta name="description" content="Banque, numéro National Insurance, médecin, logement, travail, impôts : les démarches de la vie au Royaume-Uni expliquées en français simple, dans le bon ordre. Module 1 gratuit.">
+<meta property="og:title" content="Les démarches de la vie au Royaume-Uni, étape par étape">
+<meta property="og:description" content="Le guide pratique en français pour s'installer et vivre au Royaume-Uni. Module 1 gratuit.">
+<meta property="og:url" content="https://uksteps.co.uk/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="canonical" href="https://uksteps.co.uk/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23012169'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23C8102E' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #012169;      /* Union Jack blue */
+    --red: #C8102E;       /* Union Jack red */
+    --white: #FFFFFF;
+    --mist: #F2F5FA;      /* cool paper */
+    --ink: #1A2238;       /* body text */
+    --muted: #4A5573;
+    --rule: #D5DCE8;
+    --display: "Bricolage Grotesque", "Arial Narrow", sans-serif;
+    --body: "Atkinson Hyperlegible", Verdana, sans-serif;
+    --measure: 64ch;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--white);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.1875rem;   /* 19px: easy for every age */
+    line-height: 1.6;
+  }
+  a { color: var(--navy); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 3px solid var(--red); outline-offset: 3px; border-radius: 4px;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  .top { border-bottom: 1px solid var(--rule); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--navy);
+           font-family: var(--display); font-weight: 800; font-size: 1.5rem; letter-spacing: -0.01em; }
+  .roundel { width: 30px; height: 30px; flex: none; }
+  .top nav a { font-weight: 700; text-decoration: none; }
+  .top nav a:hover { text-decoration: underline; }
+
+  /* Hero */
+  .hero { padding: 64px 0 56px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: start; }
+  h1 {
+    font-family: var(--display); font-weight: 800; color: var(--navy);
+    font-size: clamp(2.4rem, 5.4vw, 4.25rem); line-height: 1.02; letter-spacing: -0.025em;
+    margin: 0 0 24px;
+  }
+  .lede { font-size: 1.3125rem; max-width: 34ch; margin: 0 0 32px; color: var(--ink); }
+  .actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .btn {
+    display: inline-block; font: 700 1.125rem/1 var(--body); text-decoration: none;
+    padding: 18px 26px; border-radius: 999px; border: 2px solid var(--red);
+  }
+  .btn-primary { background: var(--red); color: var(--white); }
+  .btn-primary:hover { background: #A50D25; border-color: #A50D25; }
+  .btn-ghost { color: var(--navy); border-color: var(--navy); background: transparent; }
+  .btn-ghost:hover { background: var(--navy); color: var(--white); }
+  .note { font-size: 1rem; color: var(--muted); margin: 16px 0 0; }
+
+  /* The line: the memorable element. A route map of the five modules. */
+  .line { list-style: none; margin: 0; padding: 0; position: relative; }
+  .line::before {
+    content: ""; position: absolute; left: 21px; top: 22px; bottom: 22px; width: 8px;
+    background: var(--navy); border-radius: 4px;
+  }
+  .stop { position: relative; padding: 0 0 26px 72px; min-height: 44px; }
+  .stop:last-child { padding-bottom: 0; }
+  .stop::before {
+    content: ""; position: absolute; left: 7px; top: 4px; width: 36px; height: 36px;
+    border-radius: 50%; background: var(--white); border: 8px solid var(--red);
+  }
+  .stop.free::before { background: var(--red); }
+  .stop h3 { font-family: var(--display); font-weight: 600; font-size: 1.3125rem; line-height: 1.25;
+             color: var(--navy); margin: 6px 0 2px; }
+  .stop p { margin: 0; font-size: 1.0625rem; color: var(--muted); max-width: 40ch; }
+  .tag { display: inline-block; font-size: 0.875rem; font-weight: 700; color: var(--white);
+         background: var(--red); border-radius: 4px; padding: 1px 8px; margin-left: 8px; vertical-align: 3px; }
+  .line-caption { font-size: 1rem; color: var(--muted); margin: 22px 0 0 72px; }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  .band { background: var(--mist); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  h2 { font-family: var(--display); font-weight: 800; color: var(--navy);
+       font-size: clamp(1.9rem, 3.4vw, 2.6rem); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 20px; }
+  .prose { max-width: var(--measure); }
+  .prose p { margin: 0 0 16px; }
+
+  /* Why */
+  .why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 36px; }
+  .why h3 { font-family: var(--display); font-weight: 600; font-size: 1.25rem; color: var(--navy); margin: 0 0 8px;
+            padding-top: 14px; border-top: 4px solid var(--red); }
+  .why p { margin: 0; color: var(--muted); }
+
+  /* Offer */
+  .offer { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 36px;
+           border: 2px solid var(--navy); border-radius: 14px; overflow: hidden; background: var(--white); }
+  .plan { padding: 36px; }
+  .plan + .plan { background: var(--navy); color: var(--white); }
+  .plan h3 { font-family: var(--display); font-weight: 800; font-size: 1.5rem; margin: 0 0 4px; color: inherit; }
+  .plan .price { font-family: var(--display); font-weight: 800; font-size: 3rem; line-height: 1; margin: 18px 0 6px; }
+  .plan .price small { font-family: var(--body); font-weight: 400; font-size: 1rem; }
+  .plan ul { padding-left: 1.2em; margin: 18px 0 28px; }
+  .plan li { margin-bottom: 6px; }
+  .plan + .plan .btn-primary { border-color: var(--white); }
+  .plan:first-child .price { color: var(--navy); }
+
+  /* About */
+  .about { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: start; }
+  .cities { list-style: none; padding: 0; margin: 0; border-left: 4px solid var(--navy); }
+  .cities li { padding: 6px 0 6px 18px; font-family: var(--display); font-weight: 600; font-size: 1.25rem; color: var(--navy); position: relative; }
+  .cities li::before { content: ""; position: absolute; left: -10px; top: 16px; width: 16px; height: 16px; border-radius: 50%;
+                       background: var(--white); border: 4px solid var(--red); }
+  .cities li:last-child { color: var(--red); }
+
+  /* FAQ */
+  details { border-top: 1px solid var(--rule); padding: 18px 0; max-width: var(--measure); }
+  details:last-of-type { border-bottom: 1px solid var(--rule); }
+  summary { cursor: pointer; font-weight: 700; font-size: 1.1875rem; color: var(--navy); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-family: var(--display); font-size: 1.6rem; line-height: 1; color: var(--red); }
+  details[open] summary::after { content: "−"; }
+  details p { margin: 12px 0 0; color: var(--muted); }
+
+  /* Footer */
+  footer { background: var(--navy); color: #D9E0F0; padding: 48px 0; font-size: 1rem; }
+  footer a { color: var(--white); }
+  footer .brand { color: var(--white); margin-bottom: 14px; }
+  footer p { margin: 0 0 10px; max-width: 70ch; }
+  .flagbar { height: 6px; background: linear-gradient(90deg, var(--red) 0 33.3%, var(--white) 33.3% 66.6%, var(--red) 66.6%); }
+
+  @media (max-width: 860px) {
+    body { font-size: 1.125rem; }
+    .hero { padding: 40px 0; }
+    .hero .wrap, .about { grid-template-columns: 1fr; gap: 44px; }
+    .why { grid-template-columns: 1fr; gap: 28px; }
+    .offer { grid-template-columns: 1fr; }
+    .plan { padding: 28px 24px; }
+    section { padding: 56px 0; }
+    .top nav { display: none; }
+  }
+  @media (max-width: 420px) {
+    .wrap { padding: 0 16px; }
+    .btn { width: 100%; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="UKSteps, accueil">
+      <svg class="roundel" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11" fill="none" stroke="#C8102E" stroke-width="6"/><rect x="0" y="12" width="30" height="6" fill="#012169"/></svg>
+      UKSteps
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="#guide">Le guide</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="titre">
+    <div class="wrap">
+      <div>
+        <h1 id="titre">Les démarches de la vie au Royaume-Uni, étape par étape</h1>
+        <p class="lede">Banque, numéro National Insurance, médecin, logement, travail, impôts&nbsp;: tout ce qu'on ne vous explique pas en arrivant, en français simple et dans le bon ordre.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://payhip.com/b/XNSrv">Recevoir le module 1 gratuit</a>
+          <a class="btn btn-ghost" href="#guide">Voir le guide complet</a>
+        </div>
+        <p class="note">Informations vérifiées sur les sites officiels britanniques en octobre 2026.</p>
+      </div>
+
+      <div>
+        <ol class="line" aria-label="Les 5 étapes du guide">
+          <li class="stop free">
+            <h3>Les premiers pas <span class="tag">Gratuit</span></h3>
+            <p>Preuve d'adresse, compte bancaire, numéro NI, médecin, council tax, liste électorale.</p>
+          </li>
+          <li class="stop">
+            <h3>Se loger</h3>
+            <p>Dépôt de garantie, loyer d'avance, vos droits depuis la réforme de mai 2026.</p>
+          </li>
+          <li class="stop">
+            <h3>Travailler</h3>
+            <p>Droit au travail, Jobcentre, licence SIA, carte CSCS.</p>
+          </li>
+          <li class="stop">
+            <h3>L'argent et l'administration</h3>
+            <p>Fiche de paie, tax code, compte HMRC, indépendants, score de crédit.</p>
+          </li>
+          <li class="stop">
+            <h3>La vie quotidienne</h3>
+            <p>Santé, permis de conduire, école, TV Licence, arnaques à éviter.</p>
+          </li>
+        </ol>
+        <p class="line-caption">Chaque étape débloque la suivante.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="pourquoi">
+    <div class="wrap">
+      <h2 id="pourquoi">Gov.uk explique chaque démarche. Personne ne vous dit dans quel ordre.</h2>
+      <div class="prose">
+        <p>Sans preuve d'adresse, pas de compte bancaire. Sans compte, pas de salaire. Sans inscription sur la liste électorale, un dossier de crédit plus difficile à construire. Ce guide remet les démarches dans l'ordre où elles se débloquent.</p>
+      </div>
+      <div class="why">
+        <div>
+          <h3>En français simple</h3>
+          <p>Des phrases courtes, un glossaire des mots de l'administration, pour tous les âges.</p>
+        </div>
+        <div>
+          <h3>Les pièges à éviter</h3>
+          <p>Loyer d'avance interdit, mauvais tax code, dépôt non protégé : ce qui coûte cher aux nouveaux arrivants.</p>
+        </div>
+        <div>
+          <h3>Toujours à jour</h3>
+          <p>Chaque étape renvoie au lien officiel. Le guide est revu quand les règles changent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide" aria-labelledby="offre">
+    <div class="wrap">
+      <h2 id="offre">Commencez gratuitement</h2>
+      <div class="prose"><p>Le premier module est offert. S'il vous aide, le guide complet vous accompagne pour la suite.</p></div>
+      <div class="offer">
+        <div class="plan">
+          <h3>Les premiers pas</h3>
+          <p class="price">Gratuit</p>
+          <ul>
+            <li>Le module 1 complet, en PDF</li>
+            <li>La preuve d'adresse, la banque, le numéro NI, le médecin, la council tax et la liste électorale</li>
+          </ul>
+          <a class="btn btn-ghost" href="https://payhip.com/b/XNSrv">Recevoir le module 1</a>
+        </div>
+        <div class="plan">
+          <h3>Le guide complet</h3>
+          <p class="price">£12 <small>prix de lancement, paiement unique</small></p>
+          <ul>
+            <li>Les 5 modules et les annexes</li>
+            <li>Checklist des 30 premiers jours et glossaire</li>
+            <li>Accès à vie et mises à jour gratuites</li>
+          </ul>
+          <a class="btn btn-primary" href="[LIEN_PAYHIP_GUIDE]">Accéder au guide complet</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="qui">
+    <div class="wrap about">
+      <div>
+        <h2 id="qui">Qui suis-je ?</h2>
+        <ul class="cities" aria-label="Les villes où j'ai vécu">
+          <li>Birmingham</li><li>Oxford</li><li>Reading</li><li>Northampton</li><li>Coventry</li><li>Milton Keynes</li>
+        </ul>
+      </div>
+      <div class="prose">
+        <p>Je m'appelle Julien. Je suis français et je vis au Royaume-Uni depuis une dizaine d'années.</p>
+        <p>Je suis venu pour la première fois en tant qu'étudiant, à Londres, pour devenir vraiment bilingue. Je suis rentré à Paris terminer mes études, puis je suis revenu.</p>
+        <p>Depuis 2016, j'ai vécu, travaillé et étudié dans six villes. À chaque déménagement, il a fallu tout refaire : logement, médecin, changement d'adresse, nouveau council. Ce guide rassemble ce que j'aurais aimé savoir dès le premier jour.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="questions">
+    <div class="wrap">
+      <h2 id="questions">Questions fréquentes</h2>
+      <details>
+        <summary>Le guide remplace-t-il un conseil juridique ou en immigration ?</summary>
+        <p>Non. Il explique les démarches de façon générale et renvoie toujours au lien officiel. Pour votre situation personnelle, Citizens Advice donne des conseils gratuits.</p>
+      </details>
+      <details>
+        <summary>Les règles valent-elles pour tout le Royaume-Uni ?</summary>
+        <p>Le guide suit surtout les règles de l'Angleterre. L'Écosse, le pays de Galles et l'Irlande du Nord ont parfois des règles différentes, signalées quand c'est le cas.</p>
+      </details>
+      <details>
+        <summary>Je suis encore en France. Le guide m'est-il utile ?</summary>
+        <p>Oui, pour préparer votre arrivée. La plupart des démarches, comme le numéro National Insurance, ne se font qu'une fois sur place.</p>
+      </details>
+      <details>
+        <summary>Que se passe-t-il quand les règles changent ?</summary>
+        <p>Le guide est mis à jour, et les acheteurs reçoivent les mises à jour gratuitement.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<div class="flagbar" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="UKSteps, retour en haut">UKSteps</a>
+    <p>Contact : <a href="mailto:support@uksteps.co.uk">support@uksteps.co.uk</a></p>
+    <p>UKSteps est un nom commercial de Camden Acquisition Hub Ltd, société enregistrée en Angleterre et au pays de Galles sous le numéro 15431935.</p>
+    <p>Les informations de ce site et du guide sont fournies à titre pratique et ne constituent pas un conseil juridique, fiscal ou en immigration.</p>
+  </div>
+</footer>
+
+</body>
+</html>
